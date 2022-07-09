@@ -1,0 +1,14 @@
+[16,21,11,8,12,22]
+
+Let's go through the steps
+
+[16,21,11] - [8,12,22] //Divide into 2 equal parts
+[16] - [21,11] - [8,12] - [22] //Divide again
+[16] - [21] - [11] - [8] - [12] - [22] //Apply merge algorithm for each pair of length 2
+[16] - [11,21] - [8,12] - [22] //Apply merge again
+[11,16,21] - [8,12,22] //Apply the last merge
+[8,11,12,16,21,22] // The array is fully sorted
+
+And finally Big-O notation
+
+if 2^k=n then logn=k so we can state that the sorting complexity is O(nlogn)
